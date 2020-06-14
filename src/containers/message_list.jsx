@@ -7,10 +7,12 @@ class MessagesList extends Component {
   renderList = () => {
     const { messages } = this.props;
     return messages.map(message => (
-      <Message
-        message={message}
-        key={message.content}
-      />
+      <ul>
+        <Message
+          message={message}
+          key={message.content}
+        />
+      </ul>
     ));
   }
 
