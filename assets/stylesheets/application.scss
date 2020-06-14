@@ -1,7 +1,30 @@
 body {
   font-family: Helvetica;
 }
+
 .app {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.message-list {
+  ul {
+    list-style-type: none
+  }
+}
+
+.message {
+  font-size: 14px;
+}
+
+.message-heading{
+  margin-bottom: 5px;
+  p {
+    margin: 0;
+    display:inline;
+  }
+}
+
+.message-author {
+  font-weight: bold;
 }
