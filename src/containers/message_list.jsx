@@ -7,19 +7,19 @@ class MessagesList extends Component {
   renderList = () => {
     const { messages } = this.props;
     return messages.map(message => (
-      <ul>
-        <Message
-          message={message}
-          key={message.content}
-        />
-      </ul>
+      <Message
+        message={message}
+        key={message.content}
+      />
     ));
   }
 
   render() {
     return (
       <div className="message-list">
-        {this.renderList()}
+        <ul>
+          {this.renderList()}
+        </ul>
       </div>
     );
   }
