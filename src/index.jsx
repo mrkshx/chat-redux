@@ -33,7 +33,7 @@ const middleWares = applyMiddleware(logger, reduxPromise);
 
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers, {}, middleWares)}>
+  <Provider store={createStore(reducers, initialState, middleWares)}>
     <App />
   </Provider>,
   document.getElementById('root')
