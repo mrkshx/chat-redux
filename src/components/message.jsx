@@ -10,8 +10,13 @@ class Message extends Component {
     }
     return (
       <li className="message">
-        <h3>{message.author}</h3>
-        <p>{message.content}</p>
+        <div className="message-heading">
+          <p className="message-author">{message.author} - </p>
+          <p>{message.created_at}</p>
+        </div>
+        <div>
+          <p className="message-content">{message.content}</p>
+        </div>
       </li>
     );
   }
