@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
 import reduxPromise from 'redux-promise';
 
@@ -44,7 +45,7 @@ const middleWares = applyMiddleware(logger, reduxPromise);
 
 // render an instance of the component in the DOM
 ReactDOM.render(
-  <Provider store={createStore(reducers, initialState, middleWares)}>
+  <Provider store={createStore(reducers, initialState, composeWithDevTools(middleWares))}>
     <App />
   </Provider>,
   document.getElementById('root')
